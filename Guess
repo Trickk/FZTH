@@ -1,0 +1,27 @@
+import random
+
+print("---ADIVINA EL NÚMERO---")
+
+aleatorio =  random.randint(1,100)
+#print("(",aleatorio,")")
+
+contador = 0
+
+seguir = True
+
+while seguir:
+    numero = int(input("Elige un número"))
+
+    if aleatorio == numero:
+        print("¡Has ganado!")
+        seguir = False
+    elif aleatorio < numero:
+        print("¡Menos!")
+    elif aleatorio > numero:
+        print("¡Más!")
+        
+    if seguir:
+        contador += 1
+        if contador == 3:
+            print("Inserta monedas")
+            seguir = False
