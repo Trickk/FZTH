@@ -3,9 +3,8 @@ import random
 print("---ADIVINA EL NÚMERO---")
 
 aleatorio =  random.randint(1,100)
-#print("(",aleatorio,")")
 
-contador = 0
+monedas = 5
 
 seguir = True
 
@@ -21,7 +20,15 @@ while seguir:
         print("¡Más!")
         
     if seguir:
-        contador += 1
-        if contador == 3:
-            print("Inserta monedas")
-            seguir = False
+        monedas -= 1
+        if monedas == 0:
+            monedas = int(input("Inserta monedas"))
+            if monedas > 5:
+                print("Te sobra el partner, ¿eh?")
+                print("Tienes",monedas,"monedas")
+            elif monedas >= 1:
+                print("Tienes",monedas,"monedas") 
+                seguir = True
+            elif monedas == 0:
+                print("¡Has perdido!")
+                seguir = False
