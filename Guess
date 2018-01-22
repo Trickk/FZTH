@@ -9,7 +9,7 @@ monedas = 5
 seguir = True
 
 while seguir:
-    numero = int(input("Elige un número"))
+    numero = int(input("Elige un número: "))
 
     if aleatorio == numero:
         print("¡Has ganado!")
@@ -22,7 +22,7 @@ while seguir:
     if seguir:
         monedas -= 1
         if monedas == 0:
-            monedas = int(input("Inserta monedas"))
+            monedas = int(input("Inserta monedas: "))
             if monedas > 5:
                 print("Te sobra el partner, ¿eh?")
                 print("Tienes",monedas,"monedas")
